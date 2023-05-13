@@ -1,0 +1,421 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #13171a;
+  --light-black: #303335;
+  --green: #00ba6c;
+  --red: #d74038;
+  --yellow: #fcd03e;
+  --blue: #2718de;
+  --light-green: #00ba6c79;
+  --select-border: #777;
+  --light-gray: rgb(153, 153, 153);
+  --select-focus: blue;
+  --select-arrow: var(--select-border);
+  --rounded-border: 999999999px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 30rem;
+  width: 100%;
+}
+
+section {
+  padding: 15.5rem 0;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center, main .overview .bottom-content .items .item .form .heading .cross, main .overview .bottom-content .items .item .content .logo, main .left-content .arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.container {
+  margin: auto;
+  max-width: 82rem;
+  padding: 0 1.5rem;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+/*---------------------------------------------------- 
+Header Area
+----------------------------------------------------*/
+header {
+  background-color: var(--black);
+  position: relative;
+}
+header .wrapper {
+  padding: 1.5rem 0;
+}
+header .wrapper img {
+  width: 15rem;
+}
+header .padding {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  background-color: var(--light-black);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/*---------------------------------------------------- 
+Main Area
+----------------------------------------------------*/
+main {
+  padding: 3rem 0;
+}
+main .wrapper {
+  display: flex;
+  gap: 2rem;
+}
+main h1 {
+  color: var(--green);
+}
+main .left-content .label {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(197, 197, 197);
+  padding: 0.6rem 1rem;
+  gap: 0.6rem;
+  min-width: 12rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+main .left-content .label h3 {
+  display: block;
+}
+main .left-content svg {
+  transition: 0.3s ease-in-out;
+}
+main .left-content ul {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  display: grid;
+  max-height: 0;
+  height: 100%;
+  transition: 0.3s ease-in-out;
+}
+main .left-content ul li {
+  padding: 0.7rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+main .left-content ul .active {
+  background-color: var(--light-green);
+}
+main .left-content .heightwidth {
+  border: 1px solid rgba(184, 184, 184, 0.548);
+  max-height: 220px;
+  width: unset;
+  transition: 0.3s ease-in-out;
+}
+main .overview {
+  display: grid;
+  gap: 2rem;
+}
+main .overview .top-content .paras {
+  margin-top: 1.2rem;
+  display: grid;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+main .overview .bottom-content h2 {
+  color: var(--light-black);
+}
+main .overview .bottom-content .items {
+  margin-top: 1.5rem;
+}
+main .overview .bottom-content .items .item {
+  display: grid;
+  gap: 1rem;
+}
+main .overview .bottom-content .items .item img {
+  max-width: 5rem;
+  width: 100%;
+}
+main .overview .bottom-content .items .item .content {
+  display: flex;
+  gap: 1.2rem;
+  padding: 0.8rem;
+  border-radius: 30px;
+  box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.15);
+}
+main .overview .bottom-content .items .item .content .texts {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  gap: 0.4rem;
+}
+main .overview .bottom-content .items .item .content .buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-end;
+}
+main .overview .bottom-content .items .item .content p {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+main .overview .bottom-content .items .item .content .bull,
+main .overview .bottom-content .items .item .content .bear,
+main .overview .bottom-content .items .item .content .blue {
+  text-transform: uppercase;
+}
+main .overview .bottom-content .items .item .content .bull {
+  color: var(--green);
+}
+main .overview .bottom-content .items .item .content .bear {
+  color: var(--red);
+}
+main .overview .bottom-content .items .item .content .blue {
+  color: var(--blue);
+}
+main .overview .bottom-content .items .item .content .plus-btn,
+main .overview .bottom-content .items .item .content .star,
+main .overview .bottom-content .items .item .content .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+main .overview .bottom-content .items .item .content .plus-btn svg,
+main .overview .bottom-content .items .item .content .star svg,
+main .overview .bottom-content .items .item .content .arrow svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  transition: 0.3s ease-in-out;
+}
+main .overview .bottom-content .items .item .content .plus-btn {
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: var(--rounded-border);
+  border: 2px solid rgba(99, 99, 99, 0.342);
+}
+main .overview .bottom-content .items .item .content .star .star-one {
+  color: var(--light-gray);
+}
+main .overview .bottom-content .items .item .content .star .star-two {
+  color: var(--yellow);
+}
+main .overview .bottom-content .items .item .form {
+  overflow: hidden;
+  max-height: 0;
+  height: 100%;
+  transition: 0.4s ease-in-out;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+main .overview .bottom-content .items .item .form .heading {
+  position: relative;
+}
+main .overview .bottom-content .items .item .form .heading .cross {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+main .overview .bottom-content .items .item .form .heading .cross svg {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+main .overview .bottom-content .items .item .form .inputs {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+main .overview .bottom-content .items .item .form input,
+main .overview .bottom-content .items .item .form textarea,
+main .overview .bottom-content .items .item .form select {
+  width: 100%;
+  height: 2rem;
+  border-radius: 4px;
+  border: 1px solid var(--light-gray);
+  padding-left: 0.4rem;
+}
+main .overview .bottom-content .items .item .form input:focus,
+main .overview .bottom-content .items .item .form textarea:focus,
+main .overview .bottom-content .items .item .form select:focus {
+  outline: none;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+}
+main .overview .bottom-content .items .item .form textarea {
+  padding-top: 0.5rem;
+  resize: vertical;
+}
+main .overview .bottom-content .items .item .form label {
+  display: flex;
+  align-items: center;
+}
+main .overview .bottom-content .items .item .form input::-webkit-outer-spin-button,
+main .overview .bottom-content .items .item .form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main .overview .bottom-content .items .item .form input[type=number] {
+  -moz-appearance: textfield;
+}
+main .overview .bottom-content .items .item .form .input-field {
+  flex: 1 1 0;
+  width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .overview .bottom-content .items .item .height {
+  max-height: 200px;
+  padding: 2rem;
+  box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+main .filter .heading span {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+main .filter .content {
+  display: grid;
+  gap: 2rem;
+}
+main .filter .range .price-range-slider {
+  width: 100%;
+  float: left;
+  padding: 10px 20px;
+}
+main .filter .range .price-range-slider .range-value {
+  margin: 0;
+}
+main .filter .range .price-range-slider .range-value input {
+  width: 100%;
+  background: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: initial;
+  box-shadow: none;
+  border: none;
+  margin: 20px 0 20px 0;
+}
+main .filter .range .price-range-slider .range-bar {
+  border: none;
+  background: #e2e2e2;
+  height: 3px;
+  width: 96%;
+  margin-left: 8px;
+}
+main .filter .range .price-range-slider .range-bar .ui-slider-range {
+  background: #000000;
+}
+main .filter .range .price-range-slider .range-bar .ui-slider-handle {
+  border: none;
+  border-radius: 25px;
+  background: #000000;
+  height: 17px;
+  width: 17px;
+  top: -0.52em;
+  cursor: pointer;
+}
+main .filter .range .price-range-slider .range-bar .ui-slider-handle + span {
+  background: #000000;
+}
+main .filter .checkbox span {
+  display: flex;
+  font-size: 1.08rem;
+}
+main .filter .checkbox ul {
+  margin-left: 1.6rem;
+  margin-top: 0.5rem;
+  font-size: 1.08rem;
+}
+main .filter .checkbox ul li {
+  list-style: disc;
+}
+main .filter .checkbox .bottom-content {
+  margin-top: 3rem;
+  max-width: 35rem;
+  width: 100%;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.2);
+}
+main .filter .checkbox .bottom-content .items {
+  display: grid;
+  gap: 2rem;
+}
+main .filter .checkbox .bottom-content .items .item span {
+  text-transform: capitalize;
+}
+main .filter .checkbox .bottom-content .items .item .boxs {
+  margin-top: 0.5rem;
+  display: grid;
+  gap: 0.4rem;
+}
+main .filter .checkbox .bottom-content .items .item .boxs .box {
+  margin-left: 0.1rem;
+}
+main .filter .checkbox .bottom-content .items .item .boxs .box input,
+main .filter .checkbox .bottom-content .items .item .boxs .box label {
+  cursor: pointer;
+}
+main .filter .checkbox .bottom-content .items .item .boxs .box input {
+  background-color: #2196f3;
+}
+main .filter .checkbox .bottom-content .items .item .boxs .box label {
+  margin-left: 0.5rem;
+}/*# sourceMappingURL=style.css.map */
