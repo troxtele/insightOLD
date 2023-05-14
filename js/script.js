@@ -1,10 +1,9 @@
 const option = document.querySelector(".label");
 const options = document.querySelector(".options ul");
 const lists = [...options.querySelectorAll("li")];
-const sections = [...document.querySelectorAll("section")]
+const sections = [...document.querySelectorAll("section")];
 const dates = [...document.querySelectorAll(".date")];
 const strategy = [...document.querySelectorAll(".strategy .items .item")];
-
 
 option.addEventListener("click", () => {
   option.querySelector(".arrow svg").classList.toggle("rotate");
@@ -16,7 +15,14 @@ lists.map((list) =>
   list.addEventListener("click", () => {
     lists.forEach((list) => list.classList.remove("active"));
     list.classList.add("active");
-    
+
+    sections.map((section) => {
+      const string = section.className.toLowerCase();
+      section.classList.add("hidden");
+      if (string.includes(list.id.toLocaleLowerCase())) {
+        section.classList.remove("hidden");
+      }
+    });
   })
 );
 
@@ -65,15 +71,15 @@ strategy.map((item) => {
   });
 });
 
-const ranges = [...document.querySelectorAll(".ranges .item")]
+const ranges = [...document.querySelectorAll(".ranges .item")];
 
-console.log(ranges)
+console.log(ranges);
 
 ranges.map((range) => {
   const rangeInput = range.querySelectorAll(".range-input input");
   const progress = range.querySelector(".slider .progress");
 
-  let priceGap = 1000;
+  let priceGap = 300;
   rangeInput.forEach((input) => {
     input.addEventListener("input", (e) => {
       let minVal = parseInt(rangeInput[0].value),
@@ -88,6 +94,11 @@ ranges.map((range) => {
       } else {
         progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
         progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+
+        console.log(
+          (minVal / rangeInput[0].max) * 100,
+          100 - (maxVal / rangeInput[1].max) * 100
+        );
       }
     });
   });
