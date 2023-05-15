@@ -12,8 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <!-- main CSS -->
-    <link rel="stylesheet" href="./style.css" />
+
     <!-- Title icon -->
     <link rel="icon" type="icon" sizes="50x76" href="images/logo.svg" />
     <!-- Title -->
@@ -61,11 +60,9 @@
               </div>
               <!-- Options -->
               <ul class="option">
-                <li >
-                  <a class="active" href="#overview">Overview</a>
-                </li>
-                <li><a href="#analyst">Analyst Ratings</a></li>
-                <li><a href="#filter">Filters</a></li>
+                <li id="overview" class="active">Overview</li>
+                <li id="analyst">Analyst Ratings</li>
+                <li id="filter">Filters</li>
               </ul>
             </div>
           </div>
@@ -75,7 +72,7 @@
       </section>
 
       <section class="all-sections">
-        <div id="overview" class="overview">
+        <div class="overview">
           <!-- Top Content -->
           <div class="top-content">
             <div class="heading">
@@ -103,7 +100,7 @@
           </div>
         </div>
         <!-- ANALYST -->
-        <div id="analyst" class="analyst">
+        <div class="analyst">
           <div class="heading">
             <h2>Analyst Ratings</h2>
           </div>
@@ -112,100 +109,67 @@
           <div class="static-images">
             <!-- Image -->
             <div class="img">
-              <span>BULLISH with green color</span>
               <img src="./images/bullish.png" alt="bullish" />
             </div>
             <!-- Image -->
             <div class="img">
-              <span>Or BEARISH with red color </span>
               <img src="./images/bearish.png" alt="bearish" />
             </div>
             <!-- Image -->
             <div class="img">
-              <span
-                >Sector by symbol - press on the symbol to go to symbol
-                page</span
-              >
               <img src="./images/bullish-spot.png" alt="bullish" />
             </div>
             <!-- Image -->
             <div class="img">
-              <span>Last price by USD</span>
               <img src="./images/bullish-price.png" alt="bullish" />
             </div>
             <!-- Image -->
             <div class="img">
-              <span>Price change by percent on the last day</span>
               <img src="./images/bullish-percent.png" alt="bullish" />
             </div>
             <!-- Image -->
             <div class="img">
-              <span>Target price in by USD</span>
               <img src="./images/bullish-target-price.png" alt="bullish" />
             </div>
             <!-- Image -->
             <div class="img">
-              <span>Target price in by percent</span>
               <img src="./images/bullish-target-percent.png" alt="bullish" />
             </div>
             <!-- Image -->
             <div class="img">
-              <h3>on the right site of any symbol you can see 3 icons:</h3>
               <img src="./images/bullish-buttons.png" alt="bullish" />
             </div>
             <!-- Image -->
             <div class="img grid">
-              <span
-                >From the Plus Icon you can add this symbol to your choice to
-                your portfolio by adding the relevant parameters and pressing
-                save</span
-              >
               <img src="./images/bullish-plus.png" alt="bullish" />
-              <img
-                class="position-img"
-                src="./images/position.png"
-                alt="possition"
-              />
+              <img src="./images/possition.png" alt="possition" />
             </div>
             <!-- Image -->
             <div class="img">
-              <span
-                >By pressing on the star Icon you can add or remove the symbol
-                from the watchlist.</span
-              >
               <img src="./images/bullish-star.png" alt="bullish" />
             </div>
             <!-- Image -->
             <div class="img">
-              <span
-                >By pressing on the drop down arrow you can see more details on
-                the symbol 
-              </span>
               <img src="./images/bullish-arrow-down.png" alt="bullish" />
             </div>
             <!-- Image -->
             <div class="img">
-              <span></span>
               <img src="./images/bullish-arrow-up.png" alt="bullish" />
             </div>
           </div>
         </div>
-
         <!-- FILTER -->
-        <div id="filter" class="filter">
+        <div class="filter hidden">
           <div class="heading">
-            <h2>Filter</h2>
-            <h3>
-              On the left bars you can choose from the sliders the following
-              parameters
-            </h3>
+            <span
+              >On the left bars you can choose from the sliders the following
+              parameters</span
+            >
           </div>
 
           <div class="content">
             <!-- Range -->
-            <div class="ranges">
-              <img src="./images/range.png" alt="range" />
-            </div>
+            <div class="ranges"></div>
 
             <!-- Checkbox -->
             <div class="checkbox">
@@ -223,10 +187,8 @@
                 </ul>
               </div>
 
-              <!-- checkbox -->
-              <div class="checkbox-img">
-                <img src="./images/checkbox.png" alt="checkbox" />
-              </div>
+              <!-- bottom section -->
+              <div class="bottom-content"></div>
             </div>
           </div>
         </div>
