@@ -119,7 +119,7 @@ main {
 .sidenav .left-content .label {
   display: flex;
   justify-content: space-between;
-  padding: 0.6rem 1rem;
+  padding: 0.3rem 1rem;
   gap: 0.6rem;
   min-width: 12rem;
   cursor: pointer;
