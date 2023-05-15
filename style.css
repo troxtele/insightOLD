@@ -7,18 +7,14 @@
 }
 
 :root {
+  --white: #ffffff;
   --sidebar-bg: #f6f7f8;
   --section-bg: #fdfdff;
   --header-color: #a7a7a7;
-  --white: #ffffff;
   --black: #13171a;
+  --light-black: #303335;
   --green: #00ba6c;
-  --red: #d74038;
-  --yellow: #fcd03e;
-  --blue: #2718de;
   --light-green: #33ba6c62;
-  --select-arrow: var(--select-border);
-  --rounded-border: 999999999px;
 }
 
 html {
@@ -88,10 +84,6 @@ header .padding {
   background-color: var(--light-black);
 }
 
-.hidden {
-  display: none !important;
-}
-
 /*---------------------------------------------------- 
 Main Area
 ----------------------------------------------------*/
@@ -99,6 +91,7 @@ main {
   display: flex;
   gap: 2rem;
   position: relative;
+  padding-bottom: 2rem;
 }
 
 .sidenav {
@@ -161,6 +154,7 @@ main {
   display: flex;
   flex-direction: column;
   padding-right: 2rem;
+  gap: 1rem;
   background-color: var(--section-bg);
 }
 
